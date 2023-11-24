@@ -16,3 +16,5 @@ jobs:
         
       - name: Scan
         uses: silas-x/cfx-action@main
+        with:
+          command: 'semgrep --help'
