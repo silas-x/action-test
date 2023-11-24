@@ -1,18 +1,17 @@
-name: Test action
+name: 'Example server owner action'
 
 on:
   push:
-    branches: main
+    branches: 'main'
   pull_request:
-    branches: main
-  workflow_dispatch:
+    branches: 'main'
 
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: 'Checkout'
+        uses: actions/checkout@v4
         
-      - name: Scan
+      - name: 'Detect keys'
         uses: silas-x/cfx-action@main
